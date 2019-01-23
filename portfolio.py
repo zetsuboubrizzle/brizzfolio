@@ -1,10 +1,12 @@
 from forms import ContactForm
 import config
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
 
 
 portfolio = Flask(__name__)
+bootstrap = Bootstrap(portfolio)
 portfolio.config['SECRET_KEY'] = config.environ_var(config.environ['SECRET_KEY'])
 
 @portfolio.route('/')

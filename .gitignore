@@ -32,3 +32,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+__pycache__/config.cpython-36.pyc
+__pycache__/forms.cpython-36.pyc
