@@ -9,6 +9,7 @@ portfolio = Flask(__name__)
 bootstrap = Bootstrap(portfolio)
 portfolio.config['SECRET_KEY'] = 'a capella' #config.environ_var(config.environ['SECRET_KEY'])
 
+
 @portfolio.route('/')
 def index():
     return render_template('index.html')

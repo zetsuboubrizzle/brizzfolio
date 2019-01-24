@@ -40,4 +40,9 @@ Bryan Bailey - DevOps, Programming, General Wizardry
 {% block content %}
 
 {% endblock content %}
+
+{% block scripts %}
+    <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+{% endblock scripts %}
 {% endblock body %}
