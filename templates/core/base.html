@@ -1,2 +1,43 @@
 
 {% extends "bootstrap/base.html" %}
+{% block title %}
+Bryan Bailey - DevOps, Programming, General Wizardry
+{% endblock title%}
+{% block body %}
+
+{% block navbar%}
+<nav class="navbar navbar-expand bg-dark navbar-dark" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><h1>Bryan Bailey</h1><br><caption> DevOps, Programming, &amp; General Wizardry</caption></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li class="nav-item dropdown"> 
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">What I Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">Link</a>
+                        <a class="dropdown-item" href="">Link</a>
+                        <a class="dropdown-item" href="">Link</a>
+                        <a class="dropdown-item" href="">Link</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock navbar %}
+
+
+
+
+
+{% block content %}
+
+{% endblock content %}
+{% endblock body %}
