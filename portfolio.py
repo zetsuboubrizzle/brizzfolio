@@ -24,6 +24,25 @@ def about():
 def projects():
     return render_template('projects.html')
 
+@portfolio.route('/projects/devops')
+def devops():
+    return render_template('devops.html')
+
+
+@portfolio.route('/projects/gamedev')
+def gamedev():
+    return render_template('gamedev.html')
+
+
+@portfolio.route('/projects/music')
+def music():
+    return render_template('music.html')
+
+
+@portfolio.route('/projects/art')
+def art():
+    return render_template('art.html')
+
 
 @portfolio.route('/blog')
 def blog():
@@ -34,6 +53,16 @@ def blog():
 def contact():
     form = ContactForm()
     return render_template('contact.html', form=form)
+
+
+@portfolio.errorhandler(404)
+def page_not_found(e):
+    return render_template('core/404.html')
+
+
+@portfolio.errorhandler(500)
+def server_error(e):
+    return render_template('core/500.html')
 
 
 if __name__ == "__main__":

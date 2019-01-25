@@ -1,5 +1,6 @@
 
 {% extends "bootstrap/base.html" %}
+
 {% block title %}
 Bryan Bailey - DevOps, Programming, General Wizardry
 {% endblock title%}
@@ -18,10 +19,10 @@ Bryan Bailey - DevOps, Programming, General Wizardry
                 <li class="nav-item dropdown"> 
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">What I Do</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="">Link</a>
-                        <a class="dropdown-item" href="">Link</a>
-                        <a class="dropdown-item" href="">Link</a>
-                        <a class="dropdown-item" href="">Link</a>
+                        <a class="dropdown-item" href="{{ url_for('devops') }}">IT/DevOps</a>
+                        <a class="dropdown-item" href="{{url_for('gamedev') }}">Programming &amp; Game Development</a>
+                        <a class="dropdown-item" href="{{url_for('music') }}">Music</a>
+                        <a class="dropdown-item" href="{{url_for('art') }}">Art</a>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></li>
@@ -40,4 +41,6 @@ Bryan Bailey - DevOps, Programming, General Wizardry
 
 {% endblock content %}
 
-
+{% block footer %}
+{% include "core/footer.html" %}
+{% endblock footer %}
